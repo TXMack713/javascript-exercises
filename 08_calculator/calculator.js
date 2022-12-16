@@ -6,22 +6,38 @@ const subtract = function(num1, num2) {
 	return num1 - num2;
 };
 
-const sum = function(...entry) {
+const sum = function(entry) {
   let total = 0;
-	for (let i = 0; i <= entry.length; i++) {
-    total += entry[i];
-  }
-  return total;
-};
-
-const multiply = function(...nums) {
-  let total = 1;
-  if (nums.length >= 2) {
-    for (let i = 0; i <= nums.length; i++) {
-      total *= nums[i];
+  if ((entry.length == 0) || (entry == '')) {
+    return 0;
+  } else if (entry.length == 1) {
+    total = entry * 1;
+    return total;
+  } else if (entry.length >= 2) {
+    total = 0;
+    // let array = Array.from(entry);
+    for (let item of entry) {
+      console.log("summing");
+      console.log(item);
+      total += item;
+      console.log("summing total");
+      console.log(total);
     }
     return total;
+  }	
+};
+
+const multiply = function(nums) {
+  let total = 1;
+  // let array = Array.from(nums);
+  for (let num of nums) {
+    console.log("multiplying");
+    console.log(num);
+      total *= num;
+      console.log("multiplication total");
+      console.log(total);
   }
+    return total;
 };
 
 const power = function(num1, num2) {
