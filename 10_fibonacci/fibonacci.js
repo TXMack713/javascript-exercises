@@ -1,5 +1,15 @@
-const fibonacci = function() {
-
+const fibonacci = function(index) {
+    let sequence = [1];
+    let next = 0;
+    for (let i = 0; i <= index; i++) {
+        if (i == 0) {
+            sequence.push(1);
+        } else {
+            next = sequence[i] + sequence[i-1];
+            sequence.push(next);
+        }
+    }
+    return sequence[index];
 };
 
 // Do not edit below this line
