@@ -1,6 +1,9 @@
 const fibonacci = function(index) {
     let sequence = [1];
     let next = 0;
+    if (index < 0) {
+        return 'OOPS';
+    }
     for (let i = 0; i <= index; i++) {
         if (i == 0) {
             sequence.push(1);
