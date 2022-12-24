@@ -9,7 +9,7 @@ const fibonacci = function(index) {
             sequence.push(next);
         }
     }
-    return sequence[index];
+    return sequence[index-1];
 };
 
 // Do not edit below this line
