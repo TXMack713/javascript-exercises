@@ -5,7 +5,7 @@ const findTheOldest = function(arrayOfPeople) {
         let yearOfBirth = arrayOfPeople[i].yearOfBirth;
         let age = yearOfDeath - yearOfBirth;
         console.log(age);
-        if (yearOfDeath == null) {
+        if ((yearOfDeath == 'null') || (yearOfDeath == 'undefined')) {
             const date = new Date();
             let year = date.getFullYear();
             age = year - yearOfBirth;
